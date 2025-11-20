@@ -89,7 +89,7 @@ export default async function ProductDetailPage({ params }) {
         <div className="mb-8">
           <Link
             href="/products"
-            className="inline-flex items-center text-green-600 hover:text-green-800 dark:text-green-400 dark:hover:text-green-200 transition-colors"
+            className="inline-flex items-center text-green-800 hover:text-green-800 dark:text-green-700 dark:hover:text-green-200 transition-colors"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             {tDetails("backToProducts")}
@@ -111,7 +111,7 @@ export default async function ProductDetailPage({ params }) {
 
           {/* Product Details */}
           <div>
-            <p className="font-semibold uppercase tracking-wider text-green-600 dark:text-green-400">
+            <p className="font-semibold uppercase tracking-wider text-green-800 dark:text-green-700">
               {t(`filter_${product.category}`)}
             </p>
             <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
@@ -142,7 +142,7 @@ export default async function ProductDetailPage({ params }) {
               <Button
                 asChild
                 size="lg"
-                className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-lg"
+                className="w-full sm:w-auto bg-green-800 hover:bg-green-700 text-white px-8 py-6 text-lg"
               >
                 <Link href="/contact">{tDetails("ctaButton")}</Link>
               </Button>

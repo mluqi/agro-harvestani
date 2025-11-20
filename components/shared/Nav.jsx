@@ -28,8 +28,8 @@ const Nav = ({ isScrolled }) => {
               : pathname.endsWith(link.href);
 
           const scrolledClasses = isActive
-            ? "text-green-600 dark:text-green-400 font-semibold"
-            : "text-gray-600 hover:text-green-600 dark:text-gray-300 dark:hover:text-green-400";
+            ? "text-green-800 dark:text-green-700 font-semibold"
+            : "text-gray-600 hover:text-green-800 dark:text-gray-300 dark:hover:text-green-700";
 
           const topClasses = isActive
             ? "text-white font-semibold"

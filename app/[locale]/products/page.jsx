@@ -20,7 +20,7 @@ const ProductCard = ({ image, title, description, category }) => (
       />
     </div>
     <div className="p-6 flex flex-col flex-grow">
-      <p className="text-sm font-semibold uppercase tracking-wider text-green-600 dark:text-green-400">
+      <p className="text-sm font-semibold uppercase tracking-wider text-green-800 dark:text-green-700">
         {category}
       </p>
       <h3 className="mt-2 text-xl font-bold text-gray-900 dark:text-white">
@@ -78,7 +78,7 @@ const ProductsPage = () => {
                 onClick={() => setActiveFilter(category)}
                 className={`capitalize ${
                   activeFilter === category
-                    ? "bg-green-600 hover:bg-green-700 text-white"
+                    ? "bg-green-800 hover:bg-green-700 text-white"
                     : "dark:text-white"
                 }`}
               >

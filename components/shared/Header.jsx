@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { LeafIcon } from "lucide-react";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import { ThemeToggle } from "../layout/ThemeToggle";
 import { LanguageSwitcher } from "../layout/LanguageSwitcher";
 import { usePathname } from "next/navigation";
+import assets from "../../public/assets/assets";
 
 const Header = () => {
   const pathname = usePathname();
@@ -44,14 +45,12 @@ const Header = () => {
     >
       <div className="container relative mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <LeafIcon className="h-8 w-8 text-green-500 dark:text-green-400" />
-          <span
-            className={`text-xl font-bold ${
-              isScrolled ? "text-green-600 dark:text-green-400" : "text-white"
-            }`}
-          >
-            AgroHarvestani
-          </span>
+          <Image
+            src={assets.headerLogo}
+            alt="AgroHarvestani logo"
+            width={200}
+            height={200}
+          />
         </Link>
 
         {/* Desktop Nav - Centered */}

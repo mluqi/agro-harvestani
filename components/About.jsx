@@ -58,7 +58,7 @@ const AboutSection = () => {
             />
           </div>
           <div className="text-center lg:text-left">
-            <p className="font-semibold uppercase tracking-wider text-green-600 dark:text-green-400">
+            <p className="font-semibold uppercase tracking-wider text-green-800 dark:text-green-700">
               {t("eyebrow")}
             </p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
@@ -84,7 +84,7 @@ const AboutSection = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white"
+                className="bg-green-800 hover:bg-green-700 text-white"
               >
                 <Link href="/about">
                   {t("ctaButton")}

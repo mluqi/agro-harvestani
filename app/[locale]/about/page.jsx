@@ -20,7 +20,7 @@ const TeamMemberCard = ({ name, title, imageSrc }) => (
       />
     </div>
     <h3 className="text-xl font-bold text-gray-900 dark:text-white">{name}</h3>
-    <p className="text-green-600 dark:text-green-400">{title}</p>
+    <p className="text-green-800 dark:text-green-700">{title}</p>
   </div>
 );
 
@@ -116,7 +116,7 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
                 <div className="flex items-center gap-4 mb-4">
-                  <Eye className="h-10 w-10 text-green-600" />
+                  <Eye className="h-10 w-10 text-green-800" />
                   <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
                     {t("visionTitle")}
                   </h2>
@@ -127,7 +127,7 @@ const AboutPage = () => {
               </div>
               <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
                 <div className="flex items-center gap-4 mb-4">
-                  <Target className="h-10 w-10 text-green-600" />
+                  <Target className="h-10 w-10 text-green-800" />
                   <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
                     {t("missionTitle")}
                   </h2>

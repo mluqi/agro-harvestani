@@ -22,7 +22,7 @@ const ProductCard = ({ image, category, title, href, ctaText }) => (
       />
     </div>
     <div className="p-6">
-      <p className="text-sm font-semibold uppercase tracking-wider text-green-600 dark:text-green-400">
+      <p className="text-sm font-semibold uppercase tracking-wider text-green-800 dark:text-green-700">
         {category}
       </p>
       <h3 className="mt-2 text-xl font-bold text-gray-900 dark:text-white">
@@ -49,7 +49,7 @@ const OurProducts = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side: Title and Description */}
           <div className="text-center lg:text-left">
-            <p className="font-semibold uppercase tracking-wider text-green-600 dark:text-green-400">
+            <p className="font-semibold uppercase tracking-wider text-green-800 dark:text-green-700">
               {t("eyebrow")}
             </p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
@@ -81,7 +81,7 @@ const OurProducts = () => {
           <Button
             asChild
             size="lg"
-            className="bg-green-600 hover:bg-green-700 text-white px-8"
+            className="bg-green-800 hover:bg-green-700 text-white px-8"
           >
             <Link href="/products">{t("mainCtaButton")}</Link>
           </Button>

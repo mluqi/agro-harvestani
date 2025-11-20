@@ -6,10 +6,10 @@ const siteUrl =
 export const metadata = {
   title: {
     template: "%s | AgroHarvestani",
-    default: "AgroHarvestani - Indonesian Agricultural Exporter",
+    default: "AgroHarvestani - The Finest Harvest, Globally Delivered.",
   },
   description:
-    "Exporting premium quality agricultural products from Indonesia to the world. Specializing in spices, coffee, and coconut oil.",
+    "The Finest Harvest, Globally Delivered. AgroHarvestani exports premium quality agricultural products from Indonesia to the world.",
   keywords: [
     "Indonesian agricultural products",
     "spice exporter",
@@ -25,7 +25,7 @@ export const metadata = {
   openGraph: {
     title: "AgroHarvestani - Premium Indonesian Agricultural Exporter",
     description:
-      "Exporting premium quality agricultural products from Indonesia to the world. Specializing in spices, coffee, and coconut oil.",
+      "The Finest Harvest, Globally Delivered. AgroHarvestani exports premium quality agricultural products from Indonesia to the world.",
     url: siteUrl,
     siteName: "AgroHarvestani",
     images: [
@@ -33,7 +33,7 @@ export const metadata = {
         url: `${siteUrl}/og-image.png`, // Pastikan Anda memiliki gambar ini di folder /public
         width: 1200,
         height: 630,
-        alt: "AgroHarvestani - Exporting Indonesian Agriculture",
+        alt: "AgroHarvestani - The Finest Harvest, Globally Delivered.",
       },
     ],
     locale: "en_US",
@@ -41,9 +41,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AgroHarvestani - Premium Indonesian Agricultural Exporter",
+    title: "AgroHarvestani - The Finest Harvest, Globally Delivered.",
     description:
-      "Exporting premium quality agricultural products from Indonesia to the world.",
+      "The Finest Harvest, Globally Delivered. AgroHarvestani exports premium quality agricultural products from Indonesia to the world.",
     images: `${siteUrl}/og-image.png`, // Pastikan Anda memiliki gambar ini di folder /public
     site: "@agroharvestani", // Ganti dengan handle Twitter Anda jika ada
   },

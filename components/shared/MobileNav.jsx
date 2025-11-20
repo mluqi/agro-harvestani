@@ -58,9 +58,9 @@ const MobileNav = () => {
                   <SheetTrigger asChild>
                     <Link
                       href={link.href}
-                      className={`text-2xl font-semibold transition-colors hover:text-green-600 dark:hover:text-green-400 ${
+                      className={`text-2xl font-semibold transition-colors hover:text-green-800 dark:hover:text-green-700 ${
                         isActive
-                          ? "text-green-600 dark:text-green-400"
+                          ? "text-green-800 dark:text-green-700"
                           : "text-gray-700 dark:text-gray-300"
                       }`}
                     >

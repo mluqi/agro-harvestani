@@ -38,7 +38,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div>
             <Link href="/" className="inline-flex items-center gap-2 mb-4">
-              <LeafIcon className="h-8 w-8 text-green-400" />
+              <LeafIcon className="h-8 w-8 text-green-700" />
               <span className="text-xl font-bold text-white">
                 AgroHarvestani
               </span>

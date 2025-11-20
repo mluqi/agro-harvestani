@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
     <section className="py-16 sm:py-24 bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="font-semibold uppercase tracking-wider text-green-600 dark:text-green-400">
+          <p className="font-semibold uppercase tracking-wider text-green-800 dark:text-green-700">
             {t("eyebrow")}
           </p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">

@@ -31,14 +31,14 @@ const ContactPage = () => {
             </h2>
             <ul className="space-y-6 text-gray-700 dark:text-gray-300">
               <li className="flex items-start gap-4">
-                <MapPin className="h-6 w-6 text-green-600 flex-shrink-0" />
+                <MapPin className="h-6 w-6 text-green-800 flex-shrink-0" />
                 <div>
                   <span className="font-semibold block">Address:</span>
                   {t("address")}
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <Phone className="h-6 w-6 text-green-600 flex-shrink-0" />
+                <Phone className="h-6 w-6 text-green-800 flex-shrink-0" />
                 <div>
                   <span className="font-semibold block">Phone:</span>
                   <a href={`tel:${t("phone")}`} className="hover:underline">
@@ -47,7 +47,7 @@ const ContactPage = () => {
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <Mail className="h-6 w-6 text-green-600 flex-shrink-0" />
+                <Mail className="h-6 w-6 text-green-800 flex-shrink-0" />
                 <div>
                   <span className="font-semibold block">Email:</span>
                   <a href={`mailto:${t("email")}`} className="hover:underline">
@@ -102,7 +102,7 @@ const ContactPage = () => {
               </div>
               <Button
                 type="submit"
-                className="w-full bg-green-600 hover:bg-green-700 text-white"
+                className="w-full bg-green-800 hover:bg-green-700 text-white"
               >
                 {t("submitButton")}
               </Button>

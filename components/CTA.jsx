@@ -32,7 +32,7 @@ const CTA = () => {
           <Button
             asChild
             size="lg"
-            className="bg-white text-green-700 hover:bg-gray-200 dark:bg-green-500 dark:text-white dark:hover:bg-green-600 px-8 py-6 text-lg font-semibold"
+            className="bg-white text-green-700 hover:bg-gray-200 dark:bg-green-500 dark:text-white dark:hover:bg-green-800 px-8 py-6 text-lg font-semibold"
           >
             <Link href="/contact">
               {t("ctaButton")}

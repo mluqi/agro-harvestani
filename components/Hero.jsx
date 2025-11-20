@@ -82,7 +82,7 @@ const useCarousel = (itemsLength, autoplayDelay = 1500) => {
 // Sub-components
 const TrustBadge = ({ label }) => (
   <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20">
-    <Award className="h-4 w-4 text-green-400" />
+    <Award className="h-4 w-4 text-green-700" />
     <span className="text-sm font-medium">{label}</span>
   </div>
 );
@@ -90,7 +90,7 @@ const TrustBadge = ({ label }) => (
 const HeroTitle = ({ title, titleHighlight }) => (
   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
     {title}
-    <span className="text-green-400 block">{titleHighlight}</span>
+    <span className="text-green-700 block">{titleHighlight}</span>
   </h1>
 );
 
@@ -98,7 +98,7 @@ const FeatureList = ({ features, t }) => (
   <div className="mt-8 space-y-3">
     {features.map((feature) => (
       <div key={feature} className="flex items-center gap-3">
-        <div className="w-2 h-2 bg-green-400 rounded-full" />
+        <div className="w-2 h-2 bg-green-700 rounded-full" />
         <span className="text-white/80">{t(feature)}</span>
       </div>
     ))}
@@ -110,7 +110,7 @@ const CTAButtons = ({ ctaButton, aboutButton }) => (
     <Button
       asChild
       size="lg"
-      className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-lg font-semibold"
+      className="bg-green-800 hover:bg-green-700 text-white px-8 py-6 text-lg font-semibold"
     >
       <Link href="/products">
         {ctaButton}
@@ -134,11 +134,11 @@ const CTAButtons = ({ ctaButton, aboutButton }) => (
 
 const StatCard = ({ Icon, title, description }) => (
   <div className="flex items-center gap-4">
-    <div className="p-3 bg-green-600 rounded-lg">
+    <div className="p-3 bg-green-800 rounded-lg">
       <Icon className="h-6 w-6" />
     </div>
     <div>
-      <div className="text-lg font-bold text-green-400">{title}</div>
+      <div className="text-lg font-bold text-green-700">{title}</div>
       <div className="text-white/80 text-sm">{description}</div>
     </div>
   </div>
