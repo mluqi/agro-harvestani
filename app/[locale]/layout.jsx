@@ -1,10 +1,8 @@
 import { DM_Sans, DM_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { LanguageProvider } from "@/components/layout/LanguageProvider";
-import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
 import { notFound } from "next/navigation";
-
+import { AuthProvider } from "@/components/context/AuthProvider";
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
@@ -19,12 +17,12 @@ const dmMono = DM_Mono({
 export default async function LocaleLayout({ children, params }) {
   let messages;
   let locale;
-  
+
   try {
     // Await params and extract locale
     const awaitedParams = await params;
     locale = awaitedParams.locale;
-    
+
     // Load messages for the locale
     messages = (await import(`@/messages/${locale}.json`)).default;
   } catch (error) {
@@ -40,9 +38,8 @@ export default async function LocaleLayout({ children, params }) {
           initialLocale={locale}
           timeZone="Asia/Jakarta"
         >
-          <Header />
-          <div>{children}</div>
-          <Footer />
+          <AuthProvider>{children}
+          </AuthProvider>
         </LanguageProvider>
       </ThemeProvider>
     </div>

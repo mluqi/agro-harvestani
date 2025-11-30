@@ -4,6 +4,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const CTA = () => {
@@ -13,9 +14,13 @@ const CTA = () => {
     <section className="relative py-20 sm:py-28">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <div
-          className="h-full w-full bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: "url('/images/cta-background.jpg')" }}
+        <Image
+          src="/cta/cta-bg.png"
+          alt="Background image of agricultural products"
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-green-900/80 dark:bg-black/70" />
       </div>

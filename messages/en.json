@@ -2,40 +2,46 @@
   "Navigation": {
     "home": "Home",
     "about": "About Us",
+    "blogs": "Blogs",
     "products": "Products",
     "contact": "Contact"
   },
   "Hero": {
     "trusted": "Committed to Quality & Transparency",
-    "title": "A New Standard in",
-    "titleHighlight": "Agricultural Exports",
-    "subtitle": "Pioneering a new era of agricultural trade by connecting Indonesia's finest farms directly to the global market with integrity and innovation.",
-    "feature1": "Certified quality assurance & food safety",
-    "feature2": "Sustainable farming practices",
-    "feature3": "Global logistics & supply chain expertise",
-    "ctaButton": "Explore Products",
-    "aboutButton": "Our Story",
+    "title": "Indonesia's Leading Supplier",
+    "titleHighlight": "for Agricultural Commodities.",
+    "subtitle": "Pioneering reliable agricultural trade by connecting Indonesia's finest farms directly to the global market. We specialize in high-volume sourcing of Tropical Fruits, Fresh Vegetables, Tubers, Spices, Herbs, and all Indonesian Agricultural Produce, controlled from source to destination, with samples available for immediate quality verification.",
+    "feature1": "Rigorous Internal Food Safety Protocols.",
+    "feature2": "Full Traceability and Sustainable Sourcing.",
+    "feature3": "Diverse Sourcing Network: All Indonesian Produce.",
+    "feature4": "Full Supplier Transparency: Invitation for Facility & Field Inspections.",
+    "feature5": "Ready for Sample Shipments to Verify Quality.",
+    "ctaButton": "See Our Catalog",
+    "sampleButton": "Get a Sample",
     "achievements": "Our Core Commitments",
     "countries": "Global Standards",
-    "years": "Unwavering Quality",
+    "countries_desc": "Guaranteeing government-issued certificates for every shipment.",
+    "years": "Uncompromised Quality",
+    "years_desc": "Providing third-party Certificate of Analysis (COA) for all bulk shipments.",
     "farmers": "Ethical Sourcing",
+    "farmers_desc": "Building fair trade partnerships to empower local Indonesian growers.",
     "scroll": "Scroll to explore"
   },
   "Mitra": {
-    "title": "Trusted by Leading Companies Worldwide",
-    "subtitle": "We are proud to partner with industry leaders who share our commitment to quality and sustainability."
+    "title": "Verified by Indonesian Compliance & Quality Partners",
+    "subtitle": "Our sourcing and export processes are regulated by government bodies and audited by quality labs, ensuring every shipment meets global import standards."
   },
   "AboutSection": {
     "eyebrow": "About AgroHarvestani",
-    "title": "Connecting Indonesian Agriculture to the World",
-    "description": "With decades of experience, we have built a strong network of local farmers and global partners. Our mission is to deliver the finest Indonesian agricultural products to the world, ensuring quality, sustainability, and fair trade from the ground up.",
-    "value1_title": "Quality First",
-    "value1_desc": "Rigorous quality control at every stage.",
-    "value2_title": "Global Network",
-    "value2_desc": "Efficient logistics to over 50 countries.",
-    "value3_title": "Farmer Empowerment",
-    "value3_desc": "Partnering with local farmers for mutual growth.",
-    "ctaButton": "Learn More About Us"
+    "title": "Your Supply Is Our Expertise: The Farm-Direct Advantage",
+    "description": "Built on integrity and efficiency, we establish secure, direct supply channels from Indonesia's finest farms to your port. We cut out intermediaries to deliver reliable, certified bulk produce, ensuring maximum quality, total transparency, and consistent supply for every order.",
+    "value1_title": "Proactive Quality Control",
+    "value1_desc": "Our internal protocol manages moisture, residue, and grading from the field to ensure container-ready specifications.",
+    "value2_title": "Logistics Mastery & On-Time Delivery",
+    "value2_desc": "Dedicated B2B team manages efficient processing, container booking, and shipment handling for reliable global distribution.",
+    "value3_title": "Guaranteed Supply Consistency",
+    "value3_desc": "Strategic, long-term sourcing partnerships ensure stable pricing and predictable high-volume availability for recurring annual contracts.",
+    "ctaButton": "Meet Our Team & Operational Standards"
   },
   "WhyChooseUs": {
     "eyebrow": "Our Commitment",
@@ -52,8 +58,8 @@
   },
   "OurProducts": {
     "eyebrow": "Featured Products",
-    "title": "Explore Our Premium Selection",
-    "description": "A glimpse into our diverse range of high-quality agricultural exports, sourced directly from the best farms in Indonesia.",
+    "title": "Explore Our Bulk Supply Product Portfolio",
+    "description": "A glimpse into our diverse range of Phytosanitary Certified agricultural commodities, sourced directly from the best farms in Indonesia.",
     "product1_category": "Spices",
     "product1_title": "High-Quality Cloves",
     "product2_category": "Grains",
@@ -65,23 +71,13 @@
     "card_cta": "Details",
     "mainCtaButton": "View All Products"
   },
-  "Testimonials": {
-    "eyebrow": "Client Success Stories",
-    "title": "Trusted by Partners Worldwide",
-    "testimonial1_quote": "The quality of cloves from AgroHarvestani is consistently outstanding. Their professionalism and reliable delivery have made them our go-to partner in Southeast Asia.",
-    "testimonial1_name": "Hans Müller",
-    "testimonial1_company": "Global Spice Traders, Germany",
-    "testimonial2_quote": "We've been sourcing coffee beans for years. Their commitment to sustainable farming and fair trade is truly commendable and reflects in the product quality.",
-    "testimonial2_name": "Aya Tanaka",
-    "testimonial2_company": "Kyoto Coffee Roasters, Japan"
-  },
   "CTA": {
-    "title": "Ready to Grow Your Business?",
-    "description": "Contact us today to discuss your needs and discover how our premium agricultural products can benefit you. Our team is ready to assist you.",
-    "ctaButton": "Get in Touch"
+    "title": "Secure Your Reliable, Bulk Supply Today.",
+    "description": "Initiate a confidential discussion about your specific sourcing requirements, annual volume estimates, and required product specifications (COA/Phytosanitary). Our dedicated export team is ready to assist.",
+    "ctaButton": "Request RFQ & Trade Consultation"
   },
   "Footer": {
-    "tagline": "Exporting Quality Agricultural Products Worldwide.",
+    "tagline": "Supplier of Bulk, Certified Indonesian Agricultural Exports.",
     "about": "About",
     "products": "Products",
     "contact": "Contact",
@@ -136,7 +132,7 @@
     "team3_title": "Head of Global Partnerships"
   },
   "ProductsPage": {
-    "title": "Our Agricultural Products",
+    "title": "Indonesia's Full Catalog: Bulk Tropical Produce, Spices, and Agricultural Commodities.",
     "description": "Explore our comprehensive catalog of premium Indonesian agricultural products, meticulously sourced and processed to meet the highest international standards.",
     "filter_all": "All",
     "filter_fresh": "Harvestani Fresh",
@@ -261,5 +257,32 @@
     "turmeric-powder_origin": "Java, India",
     "turmeric-powder_grade": "Grade A",
     "turmeric-powder_packaging": "PP bags (25kg), Retail packs (100g, 500g)"
+  },
+  "SeoBlock": {
+    "title": "Our Full Range of Indonesian Agricultural Commodities",
+    "description": "PT Agro Harvestani Internasional is your reliable bulk supplier for a comprehensive range of Indonesian farm produce. Our catalog includes Tropical Fruits (e.g., Mangosteen, Rambutan, Banana, Dragon Fruit), Fresh Vegetables (e.g., Chili, Cabbage, Green Beans), Premium Indonesian Spices (e.g., Turmeric, Ginger, Cloves, Cinnamon), Tubers (e.g., Sweet Potato, Cassava), and unique items like Banana Leaves. Contact us for your specific sourcing needs."
+  },
+  "RequestFormPage": {
+    "title": "Submit Your Request",
+    "description": "Please fill out the form below. Whether it's for a commercial inquiry, a sample, or a facility visit, we're here to help.",
+    "nameLabel": "Your Name",
+    "emailLabel": "Your Email",
+    "phoneLabel": "Phone Number (Optional)",
+    "purposeLabel": "Purpose of Request",
+    "purposePlaceholder": "Select a purpose",
+    "purposeCommercial": "Commercial Inquiry",
+    "purposeSample": "Sample Request",
+    "purposeVisit": "Facility Visit Request",
+    "purposeOthers": "Others",
+    "messageLabel": "Your Message",
+    "submitButton": "Submit Request"
+  },
+  "LoginPage": {
+    "title": "Admin Login",
+    "description": "Please enter your credentials to access the admin panel.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "submitButton": "Login",
+    "loginError": "Invalid email or password. Please try again."
   }
 }

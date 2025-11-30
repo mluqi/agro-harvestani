@@ -23,6 +23,7 @@ const MobileNav = () => {
   const navLinks = [
     { name: t("home"), href: "/" },
     { name: t("products"), href: "/products" },
+    { name: t("blogs"), href: "/blogs" },
     { name: t("about"), href: "/about" },
     { name: t("contact"), href: "/contact" },
   ];

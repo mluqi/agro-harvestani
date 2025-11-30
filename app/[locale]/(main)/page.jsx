@@ -1,11 +1,10 @@
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/About";
-import WhyChooseUs from "@/components/WhyChooseUs";
 import OurProducts from "@/components/OurProducts";
-import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 import Mitra from "@/components/Mitra";
+import SeoText from "@/components/SeoText";
 
 export const metadata = {
   title: "Premium Agricultural Exporter from Indonesia | AgroHarvestani",
@@ -19,12 +18,11 @@ export default function Home() {
       <Hero />
       <Mitra />
       <AboutSection />
-      <WhyChooseUs />
       <OurProducts />
-      <Testimonials />
       <ScrollAnimation>
         <CTA />
       </ScrollAnimation>
+      <SeoText />
     </main>
   );
 }

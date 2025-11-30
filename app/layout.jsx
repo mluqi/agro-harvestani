@@ -1,4 +1,6 @@
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import "./globals.css";
+import { AuthProvider } from "@/components/context/AuthProvider";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.agroharvestani.com";
@@ -39,14 +41,6 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "AgroHarvestani - The Finest Harvest, Globally Delivered.",
-    description:
-      "The Finest Harvest, Globally Delivered. AgroHarvestani exports premium quality agricultural products from Indonesia to the world.",
-    images: `${siteUrl}/og-image.png`, // Pastikan Anda memiliki gambar ini di folder /public
-    site: "@agroharvestani", // Ganti dengan handle Twitter Anda jika ada
-  },
   robots: {
     index: true,
     follow: true,
@@ -69,9 +63,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    // Bahasa default untuk crawler dan pengguna tanpa JavaScript
-    <html lang="id" suppressHydrationWarning>
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <GoogleAnalytics />
+      <body>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   );
 }

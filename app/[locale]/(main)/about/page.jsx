@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/components/ScrollAnimation";
 import { Eye, Target, Gem, ShieldCheck, Sprout } from "lucide-react";
 import CTA from "@/components/CTA";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 const TeamMemberCard = ({ name, title, imageSrc }) => (
   <div className="text-center">
@@ -38,24 +39,6 @@ const ValueCard = ({ icon: Icon, title, description }) => (
 
 const AboutPage = () => {
   const t = useTranslations("AboutPage");
-
-  const teamMembers = [
-    {
-      name: t("team1_name"),
-      title: t("team1_title"),
-      imageSrc: "/team/john.jpg",
-    },
-    {
-      name: t("team2_name"),
-      title: t("team2_title"),
-      imageSrc: "/team/jane.jpg",
-    },
-    {
-      name: t("team3_name"),
-      title: t("team3_title"),
-      imageSrc: "/team/john.jpg",
-    },
-  ];
 
   const values = [
     {
@@ -167,32 +150,8 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Team Section */}
-        <section className="py-16 sm:py-24 bg-gray-50 dark:bg-gray-900/50">
-          <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                {t("teamTitle")}
-              </h2>
-              <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-                {t("teamSubtitle")}
-              </p>
-            </div>
-            <motion.div
-              className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3"
-              variants={containerVariants}
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              {teamMembers.map((member) => (
-                <motion.div key={member.name} variants={itemVariants}>
-                  <TeamMemberCard {...member} />
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
+        {/* Why Choose us Section */}
+        <WhyChooseUs />
       </main>
       <CTA />
     </>

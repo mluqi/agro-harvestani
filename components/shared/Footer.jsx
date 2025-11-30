@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { LeafIcon, MapPin, Mail, Phone } from "lucide-react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { MapPin, Mail, Phone } from "lucide-react";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import assets from "../../public/assets/assets";
+import Image from "next/image";
 
 const Footer = () => {
   const t = useTranslations("Footer");
@@ -24,11 +26,6 @@ const Footer = () => {
       icon: FaLinkedin,
       href: "https://linkedin.com",
     },
-    {
-      name: "Twitter",
-      icon: FaTwitter,
-      href: "https://twitter.com",
-    },
   ];
 
   return (
@@ -38,10 +35,12 @@ const Footer = () => {
           {/* Brand Column */}
           <div>
             <Link href="/" className="inline-flex items-center gap-2 mb-4">
-              <LeafIcon className="h-8 w-8 text-green-700" />
-              <span className="text-xl font-bold text-white">
-                AgroHarvestani
-              </span>
+              <Image
+                src={assets.footerLogo}
+                alt="AgroHarvestani logo"
+                width={150}
+                height={150}
+              />
             </Link>
             <p className="text-sm text-green-200 dark:text-gray-400 max-w-xs">
               {t("tagline")}{" "}
@@ -120,7 +119,15 @@ const Footer = () => {
 
         <div className="mt-12 border-t border-green-800 pt-8 text-center text-sm text-green-200 dark:border-gray-700 dark:text-gray-400">
           <p>
-            &copy; {new Date().getFullYear()} Agro Harvestani International.{" "}
+            &copy; {new Date().getFullYear()}{" "}
+            <a
+              className="hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://luckysdev.my.id"
+            >
+              luckysDev.
+            </a>{" "}
             {t("copyright")}
           </p>
         </div>

@@ -4,7 +4,14 @@ import React, { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Play, Award, Users, Globe } from "lucide-react";
+import {
+  ArrowRight,
+  CalendarCheck,
+  Package,
+  Award,
+  Users,
+  Globe,
+} from "lucide-react";
 import Image from "next/image";
 
 // Constants
@@ -31,22 +38,21 @@ const COMPANY_STATS = [
   {
     icon: Globe,
     titleKey: "countries",
-    description: "Adhering to international quality and safety protocols.",
+    descriptionKey: "countries_desc",
   },
   {
     icon: Award,
     titleKey: "years",
-    description: "Multi-stage quality control from farm to port.",
+    descriptionKey: "years_desc",
   },
   {
     icon: Users,
     titleKey: "farmers",
-    description:
-      "Building fair and sustainable partnerships with local growers.",
+    descriptionKey: "farmers_desc",
   },
 ];
 
-const FEATURES = ["feature1", "feature2", "feature3"];
+const FEATURES = ["feature1", "feature2", "feature3", "feature4", "feature5"];
 
 // Custom Carousel Hook
 const useCarousel = (itemsLength, autoplayDelay = 1500) => {
@@ -88,9 +94,8 @@ const TrustBadge = ({ label }) => (
 );
 
 const HeroTitle = ({ title, titleHighlight }) => (
-  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-    {title}
-    <span className="text-green-700 block">{titleHighlight}</span>
+  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+    {title} <span className="text-green-700 block">{titleHighlight}</span>
   </h1>
 );
 
@@ -105,28 +110,30 @@ const FeatureList = ({ features, t }) => (
   </div>
 );
 
-const CTAButtons = ({ ctaButton, aboutButton }) => (
-  <div className="mt-10 flex flex-col sm:flex-row gap-4">
+const CTAButtons = ({ ctaButton, sampleButton }) => (
+  <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
     <Button
       asChild
       size="lg"
       className="bg-green-800 hover:bg-green-700 text-white px-8 py-6 text-lg font-semibold"
     >
-      <Link href="/products">
+      <Link href="/products" className="flex items-center">
         {ctaButton}
         <ArrowRight className="ml-2 h-5 w-5" />
       </Link>
     </Button>
-
     <Button
       asChild
       size="lg"
       variant="outline"
-      className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold bg-transparent"
+      className="border-green-700 text-white hover:bg-green-700/20 px-8 py-6 text-lg font-semibold bg-black/20 backdrop-blur-sm"
     >
-      <Link href="/about" className="flex items-center">
-        <Play className="mr-2 h-5 w-5" />
-        {aboutButton}
+      <Link
+        href="/request-form"
+        className="text-white hover:text-green-600 underline-offset-4  font-semibold flex items-center gap-2"
+      >
+        <Package className="h-5 w-5" />
+        {sampleButton}
       </Link>
     </Button>
   </div>
@@ -154,7 +161,7 @@ const StatsSection = ({ stats, title, t }) => (
             key={index}
             Icon={stat.icon}
             title={t(stat.titleKey)}
-            description={stat.description}
+            description={t(stat.descriptionKey)}
           />
         ))}
       </div>
@@ -203,7 +210,7 @@ const Hero = () => {
   const { currentIndex } = useCarousel(HERO_IMAGES.length, 6000);
 
   return (
-    <section className="relative flex items-center py-24 md:py-32 lg:py-54 justify-center text-white overflow-hidden">
+    <section className="relative flex items-center py-24 md:py-32 lg:py-33 justify-center text-white overflow-hidden">
       {/* Background */}
       <BackgroundCarousel images={HERO_IMAGES} currentIndex={currentIndex} />
 
@@ -221,14 +228,14 @@ const Hero = () => {
               titleHighlight={t("titleHighlight")}
             />
 
-            <p className="mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
+            <p className="mt-6 text-sm md:text-md text-white/90 leading-relaxed max-w-2xl">
               {t("subtitle")}
             </p>
 
             <FeatureList features={FEATURES} t={t} />
             <CTAButtons
               ctaButton={t("ctaButton")}
-              aboutButton={t("aboutButton")}
+              sampleButton={t("sampleButton")}
             />
           </div>
 

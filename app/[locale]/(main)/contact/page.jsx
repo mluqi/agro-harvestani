@@ -1,14 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import api from "@/services/api";
+import { toast } from "sonner";
 
 const ContactPage = () => {
   const t = useTranslations("ContactPage");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      await api.post("/submissions", { ...data, type: "contact" });
+      toast.success("Message sent successfully!");
+      e.target.reset(); // Reset form
+    } catch (error) {
+      console.error("Failed to send message:", error);
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900/50 py-36 md:py-32">
@@ -63,7 +84,7 @@ const ContactPage = () => {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               {t("formTitle")}
             </h2>
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
@@ -102,9 +123,10 @@ const ContactPage = () => {
               </div>
               <Button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full bg-green-800 hover:bg-green-700 text-white"
               >
-                {t("submitButton")}
+                {isSubmitting ? "Sending..." : t("submitButton")}
               </Button>
             </form>
           </div>

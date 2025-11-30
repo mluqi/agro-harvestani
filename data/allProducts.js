@@ -120,8 +120,6 @@ export const getAllProducts = (t) => [
     title: t("nutmeg_title"),
     description: t("nutmeg_desc"),
   },
-  // ... (add other spiceworks products here following the same pattern)
-  // Harvestani Roast
   {
     id: "coffee",
     category: "roast",

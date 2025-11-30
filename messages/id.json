@@ -2,23 +2,29 @@
   "Navigation": {
     "home": "Beranda",
     "about": "Tentang Kami",
+    "blogs": "Artikel",
     "products": "Produk",
     "contact": "Kontak"
   },
   "Hero": {
-    "trusted": "Berkomitmen pada Kualitas & Transparansi",
-    "title": "Standar Baru dalam",
-    "titleHighlight": "Ekspor Pertanian",
-    "subtitle": "Merintis era baru perdagangan pertanian dengan menghubungkan perkebunan terbaik Indonesia langsung ke pasar global melalui integritas dan inovasi.",
-    "feature1": "Jaminan kualitas bersertifikat & keamanan pangan",
-    "feature2": "Praktik pertanian berkelanjutan",
-    "feature3": "Keahlian logistik global & rantai pasok",
-    "ctaButton": "Jelajahi Produk",
-    "aboutButton": "Tentang Kami",
+    "trusted": "Berkomitmen pada Kualitas &5 Transparansi",
+    "title": "Pemasok Terkemuka di Indonesia",
+    "titleHighlight": "untuk Komoditas Pertanian",
+    "subtitle": "Memperkenalkan perdagangan pertanian yang andal dengan menghubungkan peternakan terbaik Indonesia secara langsung ke pasar global. Kami spesialis dalam pengadaan skala besar buah-buahan tropis, sayuran segar, umbi-umbian, rempah-rempah, herba, dan semua produk pertanian Indonesia, dengan pengawasan dari sumber hingga tujuan, serta sampel tersedia untuk verifikasi kualitas segera.",
+    "feature1": "Protokol Keamanan Pangan Internal yang Ketat",
+    "feature2": "Pelacakan Penuh dan Pengadaan Berkelanjutan.",
+    "feature3": "Jaringan Pasokan Beragam: Semua Produk Indonesia.",
+    "feature4": "Transparansi Pemasok Penuh: Undangan untuk Inspeksi Fasilitas & Lapangan.",
+    "feature5": "Siap untuk Pengiriman Sampel untuk Memverifikasi Kualitas.",
+    "ctaButton": "Lihat Katalog",
+    "sampleButton": "Minta Sampel",
     "achievements": "Komitmen Utama Kami",
     "countries": "Standar Global",
+    "countries_desc": "Menjamin sertifikat yang dikeluarkan pemerintah untuk setiap pengiriman.",
     "years": "Kualitas Tanpa Kompromi",
+    "years_desc": "Menyediakan Sertifikat Analisis (COA) pihak ketiga untuk semua pengiriman massal.",
     "farmers": "Sumber yang Etis",
+    "farmers_desc": "Membangun kemitraan perdagangan yang adil untuk memberdayakan petani lokal Indonesia.",
     "scroll": "Gulir untuk menjelajahi"
   },
   "Mitra": {
@@ -27,15 +33,15 @@
   },
   "AboutSection": {
     "eyebrow": "Tentang AgroHarvestani",
-    "title": "Menghubungkan Pertanian Indonesia dengan Dunia",
-    "description": "Dengan pengalaman puluhan tahun, kami telah membangun jaringan yang kuat dengan petani lokal dan mitra global. Misi kami adalah menghadirkan produk pertanian terbaik Indonesia ke seluruh dunia, memastikan kualitas, keberlanjutan, dan perdagangan yang adil dari hulu ke hilir.",
-    "value1_title": "Kualitas Utama",
-    "value1_desc": "Kontrol kualitas yang ketat di setiap tahap.",
-    "value2_title": "Jaringan Global",
-    "value2_desc": "Logistik efisien ke lebih dari 50 negara.",
-    "value3_title": "Pemberdayaan Petani",
-    "value3_desc": "Bermitra dengan petani lokal untuk pertumbuhan bersama.",
-    "ctaButton": "Pelajari Lebih Lanjut"
+    "title": "Pasokan Anda Adalah Keahlian Kami: Keunggulan Langsung dari Petani",
+    "description": "Dibangun atas dasar integritas dan efisiensi, kami membangun saluran pasokan langsung dan aman dari peternakan terbaik di Indonesia langsung ke pelabuhan Anda. Kami menghilangkan perantara untuk menyediakan produk bulk yang andal dan bersertifikat, memastikan kualitas maksimal, transparansi penuh, dan pasokan yang konsisten untuk setiap pesanan.",
+    "value1_title": "Pengendalian Kualitas Proaktif",
+    "value1_desc": "Protokol internal kami mengelola kelembaban, sisa, dan klasifikasi dari lapangan untuk memastikan spesifikasi yang siap dikirim dalam kontainer.",
+    "value2_title": "Keahlian Logistik & Pengiriman Tepat Waktu",
+    "value2_desc": "Tim B2B khusus mengelola pemrosesan efisien, pemesanan kontainer, dan penanganan pengiriman untuk distribusi global yang andal.",
+    "value3_title": "Konsistensi Pasokan yang Dijamin",
+    "value3_desc": "Kemitraan pengadaan strategis jangka panjang memastikan harga stabil dan ketersediaan volume tinggi yang dapat diprediksi untuk kontrak tahunan berulang.",
+    "ctaButton": "Kenali Tim Kami & Standar Operasional"
   },
   "WhyChooseUs": {
     "eyebrow": "Komitmen Kami",
@@ -52,8 +58,8 @@
   },
   "OurProducts": {
     "eyebrow": "Produk Unggulan",
-    "title": "Jelajahi Pilihan Premium Kami",
-    "description": "Sekilas tentang beragam produk ekspor pertanian berkualitas tinggi kami, yang bersumber langsung dari perkebunan terbaik di Indonesia.",
+    "title": "Jelajahi Portofolio Produk Pasokan Massal Kami",
+    "description": "Sebuah gambaran tentang beragam komoditas pertanian yang telah bersertifikat fitosanitari, yang kami peroleh langsung dari peternakan-peternakan terbaik di Indonesia.",
     "product1_category": "Rempah-rempah",
     "product1_title": "Cengkeh Kualitas Tinggi",
     "product2_category": "Biji-bijian",
@@ -65,23 +71,13 @@
     "card_cta": "Detail",
     "mainCtaButton": "Lihat Semua Produk"
   },
-  "Testimonials": {
-    "eyebrow": "Kisah Sukses Klien",
-    "title": "Dipercaya oleh Mitra di Seluruh Dunia",
-    "testimonial1_quote": "Kualitas cengkeh dari AgroHarvestani secara konsisten luar biasa. Profesionalisme dan pengiriman mereka yang andal telah menjadikan mereka mitra utama kami di Asia Tenggara.",
-    "testimonial1_name": "Hans Müller",
-    "testimonial1_company": "Global Spice Traders, Jerman",
-    "testimonial2_quote": "Kami telah membeli biji kopi selama bertahun-tahun. Komitmen mereka terhadap pertanian berkelanjutan dan perdagangan yang adil sungguh terpuji dan tercermin pada kualitas produk.",
-    "testimonial2_name": "Aya Tanaka",
-    "testimonial2_company": "Kyoto Coffee Roasters, Jepang"
-  },
   "CTA": {
-    "title": "Siap Mengembangkan Bisnis Anda?",
-    "description": "Hubungi kami hari ini untuk mendiskusikan kebutuhan Anda dan temukan bagaimana produk pertanian premium kami dapat menguntungkan Anda. Tim kami siap membantu.",
-    "ctaButton": "Hubungi Kami"
+    "title": "Dapatkan Pasokan Terpercaya dan Berkelanjutan Anda Hari Ini.",
+    "description": "Mulailah diskusi rahasia mengenai persyaratan pengadaan spesifik Anda, perkiraan volume tahunan, dan spesifikasi produk yang diperlukan (COA/Fitosanitasi). Tim ekspor kami yang berdedikasi siap membantu.",
+    "ctaButton": "Ajukan Permintaan Penawaran (RFQ) & Konsultasi Perdagangan"
   },
   "Footer": {
-    "tagline": "Mengekspor Produk Pertanian Berkualitas ke Seluruh Dunia.",
+    "tagline": "Pemasok produk pertanian Indonesia dalam jumlah besar dan bersertifikat.",
     "about": "Tentang",
     "products": "Produk",
     "contact": "Kontak",
@@ -260,5 +256,32 @@
     "turmeric-powder_origin": "Jawa, India",
     "turmeric-powder_grade": "Grade A",
     "turmeric-powder_packaging": "Karung PP (25kg), Kemasan ritel (100g, 500g)"
+  },
+  "SeoBlock": {
+    "title": "Rangkaian Lengkap Komoditas Pertanian Indonesia Kami",
+    "description": "PT Agro Harvestani Internasional adalah pemasok massal terpercaya Anda untuk berbagai macam hasil pertanian Indonesia. Katalog kami meliputi Buah-buahan Tropis (misalnya, Manggis, Rambutan, Pisang, Buah Naga), Sayuran Segar (misalnya, Cabai, Kubis, Buncis), Rempah-rempah Premium Indonesia (misalnya, Kunyit, Jahe, Cengkeh, Kayu Manis), Umbi-umbian (misalnya, Ubi Jalar, Singkong), dan produk unik seperti Daun Pisang. Hubungi kami untuk kebutuhan pengadaan spesifik Anda."
+  },
+  "RequestFormPage": {
+    "title": "Kirim Permintaan Anda",
+    "description": "Silakan isi formulir di bawah ini. Baik untuk pertanyaan komersial, permintaan sampel, atau permintaan kunjungan fasilitas, kami siap membantu.",
+    "nameLabel": "Nama Anda",
+    "emailLabel": "Email Anda",
+    "phoneLabel": "Nomor Telepon (Opsional)",
+    "purposeLabel": "Tujuan Permintaan",
+    "purposePlaceholder": "Pilih tujuan",
+    "purposeCommercial": "Permintaan Komersial",
+    "purposeSample": "Permintaan Sampel",
+    "purposeVisit": "Permintaan Kunjungan Fasilitas",
+    "purposeOthers": "Lainnya",
+    "messageLabel": "Pesan Anda",
+    "submitButton": "Kirim Permintaan"
+  },
+  "LoginPage": {
+    "title": "Login Admin",
+    "description": "Silakan masukkan kredensial Anda untuk mengakses panel admin.",
+    "emailLabel": "Email",
+    "passwordLabel": "Kata Sandi",
+    "submitButton": "Masuk",
+    "loginError": "Email atau kata sandi salah. Silakan coba lagi."
   }
 }
