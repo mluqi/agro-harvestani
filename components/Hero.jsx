@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import api from "@/services/api";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -14,25 +15,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-// Constants
-const HERO_IMAGES = [
-  {
-    src: "/hero-images/ladang2.png",
-    alt: "Lahan pertanian yang luas dan subur",
-  },
-  {
-    src: "/hero-images/ladang.png",
-    alt: "Petani memegang hasil panen segar berkualitas ekspor",
-  },
-  {
-    src: "/hero-images/shipping.png",
-    alt: "Kontainer kargo di pelabuhan siap untuk ekspor global",
-  },
-  {
-    src: "/hero-images/biji.png",
-    alt: "Proses inspeksi dan jaminan kualitas produk pertanian",
-  },
-];
+const backendUrl =
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.agroharvestani.com";
 
 const COMPANY_STATS = [
   {
@@ -152,13 +136,14 @@ const StatCard = ({ Icon, title, description }) => (
 );
 
 const StatsSection = ({ stats, title, t }) => (
-  <div className="hidden lg:block">
-    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-      <h3 className="text-2xl font-bold mb-6">{title}</h3>
-      <div className="space-y-6">
-        {stats.map((stat, index) => (
+  // Wrapper div dengan padding dan margin untuk mobile, dan reset di desktop (lg)
+  <div className="mt-12 lg:mt-0">
+    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20">
+      <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">{title}</h3>
+      <div className="space-y-4 md:space-y-6">
+        {stats.map((stat) => (
           <StatCard
-            key={index}
+            key={stat.titleKey}
             Icon={stat.icon}
             title={t(stat.titleKey)}
             description={t(stat.descriptionKey)}
@@ -170,7 +155,7 @@ const StatsSection = ({ stats, title, t }) => (
 );
 
 const ScrollIndicator = ({ label }) => (
-  <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+  <div className="md:absolute bottom-8 left-1/2 -translate-x-1/2">
     <div className="flex flex-col items-center gap-2">
       <span className="text-sm text-white/70">{label}</span>
       <div className="h-10 w-6 rounded-full border-2 border-white/50 flex justify-center items-start p-1">
@@ -192,8 +177,12 @@ const BackgroundCarousel = ({ images, currentIndex }) => (
         }}
       >
         <Image
-          src={image.src}
-          alt={image.alt}
+          src={
+            image.image_url
+              ? `${backendUrl}/${image.image_url}`
+              : "/assets/placeholder.jpeg"
+          }
+          alt={image.alt_text}
           fill
           className="object-cover object-center"
           priority={index === 0}
@@ -207,12 +196,42 @@ const BackgroundCarousel = ({ images, currentIndex }) => (
 // Main Component
 const Hero = () => {
   const t = useTranslations("Hero");
-  const { currentIndex } = useCarousel(HERO_IMAGES.length, 6000);
+  const [heroImages, setHeroImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchHeroImages = async () => {
+      try {
+        const response = await api.get("/content/hero_images");
+        if (response.data && response.data.data.length > 0) {
+          setHeroImages(response.data.data);
+        }
+      } catch (error) {
+        console.error("Failed to fetch hero images:", error);
+        // Fallback ke gambar default jika API gagal
+        setHeroImages([
+          { src: "/hero-images/ladang2.png", alt: "Default hero image" },
+        ]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchHeroImages();
+  }, []);
+
+  const { currentIndex } = useCarousel(heroImages.length, 6000);
+  if (loading)
+    return (
+      <section className="relative flex items-center justify-center h-screen bg-gray-200 dark:bg-gray-800">
+        <div>Loading Hero...</div>
+      </section>
+    );
 
   return (
     <section className="relative flex items-center py-24 md:py-32 lg:py-33 justify-center text-white overflow-hidden">
       {/* Background */}
-      <BackgroundCarousel images={HERO_IMAGES} currentIndex={currentIndex} />
+      <BackgroundCarousel images={heroImages} currentIndex={currentIndex} />
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40" />
@@ -237,10 +256,24 @@ const Hero = () => {
               ctaButton={t("ctaButton")}
               sampleButton={t("sampleButton")}
             />
+            {/* Stats Section untuk Mobile - ditampilkan di bawah CTA */}
+            <div className="lg:hidden">
+              <StatsSection
+                stats={COMPANY_STATS}
+                title={t("achievements")}
+                t={t}
+              />
+            </div>
           </div>
 
-          {/* Stats Section */}
-          <StatsSection stats={COMPANY_STATS} title={t("achievements")} t={t} />
+          {/* Stats Section untuk Desktop - ditampilkan di kolom kedua */}
+          <div className="hidden lg:block">
+            <StatsSection
+              stats={COMPANY_STATS}
+              title={t("achievements")}
+              t={t}
+            />
+          </div>
         </div>
       </div>
 

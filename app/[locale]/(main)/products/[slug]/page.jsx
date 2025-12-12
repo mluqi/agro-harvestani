@@ -9,7 +9,7 @@ import { ArrowLeft } from "lucide-react";
 import api from "@/services/api";
 
 const backend_url =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.agroharvestani.com";
 
 const SpecificationItem = ({ label, value }) => (
   <div className="border-b border-gray-200 dark:border-gray-700 py-3 flex justify-between">
@@ -126,8 +126,12 @@ export default function ProductDetailPage({ params }) {
 
             {product.product_notes && (
               <div className="mt-10">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Additional Notes</h2>
-                <p className="mt-4 text-gray-600 dark:text-gray-300">{product.product_notes}</p>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Additional Notes
+                </h2>
+                <p className="mt-4 text-gray-600 dark:text-gray-300">
+                  {product.product_notes}
+                </p>
               </div>
             )}
 

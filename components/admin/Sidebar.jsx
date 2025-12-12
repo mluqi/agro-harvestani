@@ -6,6 +6,7 @@ import useAuth from "@/hooks/useAuth";
 import {
   Newspaper,
   LayoutDashboard,
+  SquareChartGanttIcon,
   Users,
   Package,
   User,
@@ -32,7 +33,7 @@ import assets from "@/public/assets/assets";
 import Image from "next/image";
 
 const backend_url =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.agroharvestani.com";
 
 // Mapping untuk mencocokkan path dari API dengan ikon
 const iconMap = {
@@ -42,6 +43,7 @@ const iconMap = {
   "/admin/category": Shapes,
   "/admin/inbox": Inbox,
   "/admin/products": Package,
+  "/admin/content": SquareChartGanttIcon,
 };
 
 const Sidebar = ({ isCollapsed }) => {
@@ -132,7 +134,11 @@ const Sidebar = ({ isCollapsed }) => {
                 className="flex h-12 w-full items-center justify-start gap-3 px-2"
               >
                 <Image
-                  src={user?.user_foto ? `${backend_url}/${user.user_foto}` : assets.logo}
+                  src={
+                    user?.user_foto
+                      ? `${backend_url}/${user.user_foto}`
+                      : assets.logo
+                  }
                   width={30}
                   height={30}
                   alt="Avatar"

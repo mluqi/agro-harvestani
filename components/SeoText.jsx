@@ -12,7 +12,6 @@ const SeoText = () => {
       <div className="absolute inset-0">
         <div
           className="h-full w-full bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: "url('/images/cta-background.jpg')" }}
         />
         <div className="absolute inset-0 bg-white dark:bg-black/70" />
       </div>

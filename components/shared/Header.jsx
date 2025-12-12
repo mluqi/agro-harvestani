@@ -45,12 +45,25 @@ const Header = () => {
     >
       <div className="container relative mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <Image
-            src={assets.headerLogo}
-            alt="AgroHarvestani logo"
-            width={150}
-            height={150}
-          />
+          {isScrolled ? (
+            <Image
+              src={assets.headerLogo}
+              alt="AgroHarvestani logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-auto w-[125px] md:w-[120px] lg:w-[150px]"
+            />
+          ) : (
+            <Image
+              src={assets.headerlogo2}
+              alt="AgroHarvestani logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-auto w-[125px] md:w-[120px] lg:w-[150px]"
+            />
+          )}
         </Link>
 
         {/* Desktop Nav - Centered */}

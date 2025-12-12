@@ -19,7 +19,7 @@ const Footer = () => {
     {
       name: "Instagram",
       icon: FaInstagram,
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/agroharvestani/",
     },
     {
       name: "LinkedIn",
@@ -62,6 +62,14 @@ const Footer = () => {
               <li>
                 <Link
                   href="/products"
+                  className="text-green-200 hover:text-white dark:text-gray-400 dark:hover:text-white transition-colors"
+                >
+                  {t("products")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blogs"
                   className="text-green-200 hover:text-white dark:text-gray-400 dark:hover:text-white transition-colors"
                 >
                   {t("products")}

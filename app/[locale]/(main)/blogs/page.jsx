@@ -5,6 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import api from "@/services/api";
 
+const backendUrl =
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.agroharvestani.com";
+
 // Objek terjemahan sederhana untuk header
 const translations = {
   en: {
@@ -26,7 +29,7 @@ const BlogCard = ({ post }) => (
         <Image
           src={
             post.featured_image
-              ? `${process.env.NEXT_PUBLIC_API_BASE_URL}/${post.featured_image}`
+              ? `${backendUrl}/${post.featured_image}`
               : "https://placehold.co/600x400/2E7D32/FFFFFF?text=Article"
           }
           alt={post.title}
@@ -95,7 +98,7 @@ const BlogsPage = ({ params: { locale } }) => {
             ))}
           </div>
         ) : (
-          <div className="text-center text-gray-500">
+          <div className="text-center text-gray-500 min-h-[400px] flex items-center justify-center">
             No articles found for this language.
           </div>
         )}

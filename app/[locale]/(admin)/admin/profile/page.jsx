@@ -18,7 +18,7 @@ import { Label } from "@/components/ui/label";
 import assets from "@/public/assets/assets";
 
 const backend_url =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.agroharvestani.com";
 
 const ProfilePage = () => {
   const { user, revalidateUser } = useAuth();

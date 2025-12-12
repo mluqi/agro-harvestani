@@ -11,7 +11,7 @@ import api from "@/services/api";
 import { Button } from "./ui/button";
 
 const backend_url =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.agroharvestani.com";
 
 // Helper function to generate a URL-friendly slug from a category name
 const slugify = (text) => {

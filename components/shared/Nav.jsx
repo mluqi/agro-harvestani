@@ -18,7 +18,7 @@ const Nav = ({ isScrolled }) => {
 
   return (
     <nav>
-      <ul className="flex items-center gap-8">
+      <ul className="flex items-center gap-8 lg:gap-8 md:gap-2">
         {navLinks.map((link) => {
           // Logika baru untuk tautan aktif
           // 1. Jika href adalah '/', cek apakah pathname adalah '/' atau '/en' atau '/id'
@@ -40,7 +40,7 @@ const Nav = ({ isScrolled }) => {
             <li key={link.name}>
               <Link
                 href={link.href}
-                className={`text-base font-medium transition-colors duration-300 px-3 py-2 rounded-md ${
+                className={`text-base md:text-sm md:px-2 lg:text-base font-medium transition-colors duration-300 px-4 py-2 rounded-md whitespace-nowrap ${
                   isScrolled ? scrolledClasses : topClasses
                 }`}
               >

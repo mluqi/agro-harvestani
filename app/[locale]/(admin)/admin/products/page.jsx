@@ -32,7 +32,7 @@ import ConfirmationDialog from "@/components/common/ConfirmationDialog";
 import ProductForm from "@/components/admin/ProductForm";
 
 const backend_url =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.agroharvestani.com";
 
 const AdminProductsPage = () => {
   const [products, setProducts] = useState([]);
@@ -210,8 +210,9 @@ const AdminProductsPage = () => {
                     <Button
                       onClick={() =>
                         window.open(
-                          `/products/${product.product_slug_id ||
-                            product.product_slug_en}`,
+                          `/products/${
+                            product.product_slug_id || product.product_slug_en
+                          }`,
                           "_blank"
                         )
                       }

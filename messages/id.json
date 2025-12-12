@@ -7,7 +7,7 @@
     "contact": "Kontak"
   },
   "Hero": {
-    "trusted": "Berkomitmen pada Kualitas &5 Transparansi",
+    "trusted": "Berkomitmen pada Kualitas & Transparansi",
     "title": "Pemasok Terkemuka di Indonesia",
     "titleHighlight": "untuk Komoditas Pertanian",
     "subtitle": "Memperkenalkan perdagangan pertanian yang andal dengan menghubungkan peternakan terbaik Indonesia secara langsung ke pasar global. Kami spesialis dalam pengadaan skala besar buah-buahan tropis, sayuran segar, umbi-umbian, rempah-rempah, herba, dan semua produk pertanian Indonesia, dengan pengawasan dari sumber hingga tujuan, serta sampel tersedia untuk verifikasi kualitas segera.",
@@ -80,13 +80,14 @@
     "tagline": "Pemasok produk pertanian Indonesia dalam jumlah besar dan bersertifikat.",
     "about": "Tentang",
     "products": "Produk",
+    "blogs": "Artikel",
     "contact": "Kontak",
     "copyright": "Hak Cipta Dilindungi.",
     "quickLinks": "Tautan Cepat",
     "contactUs": "Hubungi Kami",
-    "address": "Jl. Perkebunan 123, Jakarta, Indonesia 12345",
-    "phone": "+62 21 1234 5678",
-    "email": "kontak@agroharvestani.com",
+    "address": "Head Office : The East Tower, 37th Floor, Jl. Dr. Ide Anak Agung Gde Agung, Kav. E3.2, Jakarta, Indonesia, 12950",
+    "phone": "+62 821 3699 5916",
+    "email": "info@agroharvestani.com",
     "followUs": "Ikuti Kami"
   },
   "ContactPage": {
@@ -100,9 +101,9 @@
     "messageLabel": "Pesan Anda",
     "submitButton": "Kirim Pesan",
     "locationTitle": "Lokasi Kami",
-    "address": "Jl. Perkebunan 123, Jakarta, Indonesia 12345",
-    "phone": "+62 21 1234 5678",
-    "email": "kontak@agroharvestani.com"
+    "address": "Head Office : The East Tower, 37th Floor, Jl. Dr. Ide Anak Agung Gde Agung, Kav. E3.2, Jakarta, Indonesia, 12950",
+    "phone": "+62 821 3699 5916",
+    "email": "info@agroharvestani.com"
   },
   "AboutPage": {
     "title": "Merintis Masa Depan Perdagangan Pertanian",

@@ -1,51 +1,38 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import api from "@/services/api";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+
+const backendUrl =
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.agroharvestani.com";
 
 const Mitra = () => {
   const [offset, setOffset] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-
-  const partners = [
-    {
-      name: "Aura",
-      logo: "https://placehold.co/400x400/e5e5e5/999999?text=AURA",
-    },
-    {
-      name: "Brand New Day",
-      logo: "https://placehold.co/400x400/e5e5e5/999999?text=BRAND+NEW+DAY",
-    },
-    {
-      name: "Enpal",
-      logo: "https://placehold.co/400x400/e5e5e5/999999?text=ENPAL",
-    },
-    {
-      name: "Mews",
-      logo: "https://placehold.co/400x400/e5e5e5/999999?text=MEWS",
-    },
-    {
-      name: "SVEA",
-      logo: "https://placehold.co/400x400/e5e5e5/999999?text=SVEA",
-    },
-    {
-      name: "Plaid",
-      logo: "https://placehold.co/400x400/e5e5e5/999999?text=PLAID",
-    },
-    {
-      name: "Mo",
-      logo: "https://placehold.co/400x400/e5e5e5/999999?text=MO",
-    },
-    {
-      name: "Tech Co",
-      logo: "https://placehold.co/400x400/e5e5e5/999999?text=TECH+CO",
-    },
-  ];
+  const [partners, setPartners] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // Duplicate partners for seamless loop
   const duplicatedPartners = [...partners, ...partners, ...partners];
 
-  // Continuous auto slide
+  useEffect(() => {
+    const fetchMitraLogos = async () => {
+      try {
+        const response = await api.get("/content/mitra_logos");
+        if (response.data && response.data.data) {
+          setPartners(response.data.data);
+        }
+      } catch (error) {
+        console.error("Failed to fetch partner logos:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchMitraLogos();
+  }, []);
+
   useEffect(() => {
     if (isPaused) return;
 
@@ -54,16 +41,25 @@ const Mitra = () => {
     }, 20); // Update every 20ms for smooth animation
 
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, [isPaused, partners.length]);
 
   // Reset offset when it reaches the end
   useEffect(() => {
-    if (offset <= -(partners.length * 160)) {
+    // Lebar setiap item logo sekitar 160px di desktop
+    if (partners.length > 0 && offset <= -(partners.length * 160)) {
       setOffset(0);
     }
   }, [offset, partners.length]);
 
   const t = useTranslations("Mitra");
+
+  if (loading) {
+    return (
+      <div className="w-full bg-white dark:bg-gray-900 py-16 text-center">
+        Loading partners...
+      </div>
+    );
+  }
 
   return (
     <div className="w-full bg-white dark:bg-gray-900 py-16 sm:py-24 px-4 overflow-hidden transition-colors duration-300">
@@ -93,12 +89,13 @@ const Mitra = () => {
             {duplicatedPartners.map((partner, index) => (
               <div
                 key={`${partner.name}-${index}`}
-                className="flex-shrink-0 w-16 md:w-32"
+                className="flex-shrink-0 w-24 md:w-32"
               >
-                <div className="w-16 h-10 md:w-32 md:h-12 flex items-center justify-center group">
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
+                <div className="w-24 h-12 md:w-32 md:h-16 flex items-center justify-center group relative">
+                  <Image
+                    src={`${backendUrl}/${partner.image_url}`}
+                    alt={partner.alt_text || "Partner Logo"}
+                    fill
                     className="max-w-full rounded-xl max-h-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 dark:opacity-40 dark:hover:opacity-90 transition-all duration-300 group-hover:filter group-hover:brightness-95"
                   />
                 </div>

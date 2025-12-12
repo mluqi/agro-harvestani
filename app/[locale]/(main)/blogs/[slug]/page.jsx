@@ -7,7 +7,7 @@ async function getBlogData(slug) {
   try {
     // Menggunakan fetch karena ini berjalan di server
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blogs/${slug}`,
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs/${slug}`,
       { next: { revalidate: 600 } } // Cache selama 10 menit
     );
 

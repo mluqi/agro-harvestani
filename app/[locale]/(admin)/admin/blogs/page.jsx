@@ -40,7 +40,7 @@ import {
 import { DatePickerWithRange } from "@/components/ui/date-picker-with-range";
 
 const backend_url =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.agroharvestani.com";
 
 const AdminBlogsPage = () => {
   const [blogs, setBlogs] = useState([]);
@@ -66,11 +66,15 @@ const AdminBlogsPage = () => {
         endDate: dateRange?.to,
       };
       // Hapus parameter yang tidak terdefinisi
-      Object.keys(params).forEach(key => params[key] === undefined && delete params[key]);
+      Object.keys(params).forEach(
+        (key) => params[key] === undefined && delete params[key]
+      );
 
       const response = await api.get("/blogs/manage/all", { params });
       setBlogs(response.data.data || []);
-      setPagination(response.data.pagination || { currentPage: 1, totalPages: 1 });
+      setPagination(
+        response.data.pagination || { currentPage: 1, totalPages: 1 }
+      );
     } catch (error) {
       console.error("Failed to fetch blogs:", error);
       toast.error("Gagal memuat daftar artikel.");

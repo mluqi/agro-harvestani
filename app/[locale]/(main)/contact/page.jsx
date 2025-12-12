@@ -140,7 +140,7 @@ const ContactPage = () => {
           <div className="relative h-96 w-full rounded-xl overflow-hidden">
             {/* Replace with your actual Google Maps embed code */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.328362090887!2d106.8197793147691!3d-6.21908999549925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e4d9b9d9d9%3A0x123456789abcdef0!2sJakarta%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1678901234567!5m2!1sen!2sid"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2618442605517!2d106.82520439999999!3d-6.2291693999999955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e48671e019%3A0xd4082bd0688e6f52!2sThe%20East!5e0!3m2!1sen!2sid!4v1764646189355!5m2!1sen!2sid"
               width="100%"
               height="100%"
               style={{ border: 0 }}

@@ -33,7 +33,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const backend_url =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.agroharvestani.com";
 
 const UsersPage = () => {
   const [users, setUsers] = useState([]);

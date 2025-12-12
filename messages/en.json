@@ -80,13 +80,14 @@
     "tagline": "Supplier of Bulk, Certified Indonesian Agricultural Exports.",
     "about": "About",
     "products": "Products",
+    "blogs": "Blogs",
     "contact": "Contact",
     "copyright": "All Rights Reserved.",
     "quickLinks": "Quick Links",
     "contactUs": "Contact Us",
-    "address": "123 Plantation St, Jakarta, Indonesia 12345",
-    "phone": "+62 21 1234 5678",
-    "email": "contact@agroharvestani.com",
+    "address": "Head Office : The East Tower, 37th Floor, Jl. Dr. Ide Anak Agung Gde Agung, Kav. E3.2, Jakarta, Indonesia, 12950",
+    "phone": "+62 821 3699 5916",
+    "email": "info@agroharvestani.com",
     "followUs": "Follow Us"
   },
   "ContactPage": {
@@ -100,9 +101,9 @@
     "messageLabel": "Your Message",
     "submitButton": "Send Message",
     "locationTitle": "Our Location",
-    "address": "123 Plantation St, Jakarta, Indonesia 12345",
-    "phone": "+62 21 1234 5678",
-    "email": "contact@agroharvestani.com"
+    "address": "Head Office : The East Tower, 37th Floor, Jl. Dr. Ide Anak Agung Gde Agung, Kav. E3.2, Jakarta, Indonesia, 12950",
+    "phone": "+62 821 3699 5916",
+    "email": "info@agroharvestani.com"
   },
   "AboutPage": {
     "title": "Pioneering the Future of Agricultural Trade",
